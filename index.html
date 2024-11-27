@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookClub - Privacy Policy & Terms of Use</title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+             display: flex;
+             align-items: center;
+             padding: 1.5rem;
+             background-color: #f4f4f4;
+        }
+
+        header .logo-container {
+            display: flex;
+            align-items: center;
+            margin-right: auto; /* Spazio tra il logo e i link di navigazione */
+        }
+
+        header img {
+            width: 4rem;
+            height: auto;
+            margin-right: 1rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #3B3A56;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav a:hover {
+            color: #3B3A56;
+        }
+        .container {
+            padding: 1rem;
+            margin: 0rem 1.7rem;
+        }
+        .listElem {
+            padding-top: 3rem;
+        }
+        h2 {
+            color: #3B3A56;
+            margin-top: 0rem;
+        }
+        p {
+            margin: 0rem 0;
+        }
+        a {
+            color: #3B3A56; 
+            text-decoration: none; 
+        }
+        a:hover {
+            color: #3B3A56;
+        }
+        a:visited {
+            color: #3B3A56; 
+        }
+        .section {
+            display: none;
+            padding-bottom: 3rem;
+        }
+
+        @media (max-width: 600px) {
+    header {
+        padding: 1rem;
+    }
+
+    header img {
+        width: 1.6rem; /* Riduce la dimensione dell'icona */
+        margin-right: 0.5rem;
+    }
+
+    header h1 {
+        font-size: 1.2rem; /* Riduce la dimensione del titolo */
+        padding-right: 1rem;
+    }
+
+    nav a {
+        font-size: 0.7rem; /* Riduce la dimensione del testo dei link nella navbar */
+    }
+
+    .container {
+        padding: 0.5rem; /* Riduce il padding per la sezione principale */
+    }
+
+    .listElem {
+        padding-top: 2rem; /* Riduce lo spazio tra le sezioni */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="./Assets/BookClubIcon.png" alt="BookClub Logo">
+            <h1>BookClub</h1>
+        </div>
+        <nav>
+            <a href="#privacy-policy" id="privacy-link">Privacy Policy</a>
+            <a href="#terms-of-use" id="terms-link">Contact us</a>
+        </nav>
+        
+    </header>
+
+
+    <div class="container">
+        <section id="privacy-policy" class="listElem">
+            <h2>Privacy Policy</h2>
+            <p><strong>Last Updated: 27/11/2024</strong></p>
+
+            <div class="listElem">
+                <h2>1. No Collection of User Data</h2>
+                <p>BookClub <strong>does not collect, store, or process any personal data</strong> from its users. Our application is designed to draw and express in the best way possible.</p>
+            </div> 
+
+           
+
+            <div class="listElem">
+                <h2>2. Third-Party Services</h2>
+                <p>BookClub does not use any other third-party services that may collect personal data.</p>
+            </div> 
+
+            <div class="listElem">
+                <h2>3. User Rights</h2>
+                <p>Since BookClub does not collect any personal data, there is no need for data access, correction, or deletion requests.</p>
+            </div> 
+
+            <div class="listElem">
+                <h2>4. Contact Us</h2>
+                <p>If you have any questions or concerns about this Privacy Policy, please contact us at <a href="mailto:marziapirozzi2002@gmail.com">marziapirozzi2002@gmail.com</a>.</p>
+            </div>
+        </section>
+        <section id="terms-of-use" class="listElem">
+            <h2>Contact us</h2>
+            <div class="listElem">
+                <p>If you have any questions or concerns about these Terms, please contact us at <a href="mailto:marziapirozzi2002@gmail.com">marziapirozzi2002@gmail.com</a>.</p>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const privacyLink = document.getElementById('privacy-link');
+        const termsLink = document.getElementById('terms-link');
+        const privacySection = document.getElementById('privacy-policy');
+        const termsSection = document.getElementById('terms-of-use');
+
+        function showSection(sectionToShow) {
+            privacySection.style.display = 'none';
+            termsSection.style.display = 'none';
+            sectionToShow.style.display = 'block';
+        }
+
+        privacyLink.addEventListener('click', function() {
+            showSection(privacySection);
+        });
+
+        termsLink.addEventListener('click', function() {
+            showSection(termsSection);
+        });
+
+        // Show the section based on the URL hash
+        const hash = window.location.hash;
+        if (hash === '#privacy-policy') {
+            showSection(privacySection);
+        } else if (hash === '#terms-of-use') {
+            showSection(termsSection);
+        } else {
+            // Default to showing Privacy Policy
+            showSection(privacySection);
+        }
+    });
+</script>
+
+ </html>
+               
